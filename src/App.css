@@ -1,38 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  width: 100%;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  box-sizing: border-box;
+  padding: 3rem;
+  /* border: solid; */
+  border-radius: 2rem;
+  background-color: white;
+  box-shadow: 5px 5px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 3rem 0;
+}
+
+form {
+  display: flex;
+  height: 2.5rem;
+  border: solid 1px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 1px 2px 3px lightgray;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+form input {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem 0 0 1rem;
+  overflow: hidden;
+  width: 100%;
+}
+form input:focus {
+  border: none;
+  outline: none;
+}
+form button {
+  border: none;
+
+  border-radius: 0 1rem 1rem 0;
+  cursor: pointer;
+  width: 2.5rem;
+  background-color: white;
+}
+.WeatherDetails {
+  color: black;
+  text-align: center;
+}
+.temperature {
+  display: flex;
+  align-items: start;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.temperature h1 {
+  margin: 0;
+  font-size: 3.5rem;
+  font-weight: 500;
 }
+.temperature span {
+  font-size: 2rem;
+}
+.WeatherIcon {
+  height: 8rem;
+}
+.extra {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 2rem 0;
+}
+.extra div {
+  color: rgba(54, 54, 54, 0.6);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  padding: 0.8rem 0.4rem;
+  border: solid 1px;
+  border-radius: 10px;
+  background-color: rgba(197, 197, 197, 0.2);
+}
+.extra div h3 {
+  font-size: 0.7rem;
+  margin: 0.2rem 0;
+}
+.sunbar {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  width: 100%;
+
+  align-items: center;
+}
+#day-icon {
+  flex-grow: 1;
+  width: 100%;
+  padding: 0 0.5rem;
+  padding-top: 4px;
+  border-radius: 1rem;
+  background-color: #466eff;
+  text-align: left;
+}
+#sunbar-measure {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#sunbar-measure div {
+  background: "white";
+  padding: 8px 0;
+  border-radius: 50%;
+  font-size: 0.6rem;
+  text-align: center;
+}
+.WeatherForecast{
+  width: 100%;
+}
+.hourly-forecast{
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.hourly-forecast li{
+  padding: 1rem;
+  /* border: solid; */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 3px;
+  cursor: pointer;
+}
+.hourly-forecast li span{
+  flex-grow: 1;
+}
+.hourly-forecast li div{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  text-align: center;
+  margin: 0 5px;
+}
+.hourly-forecast li img{
+  height: 2rem;
+}
+.tabs{
+  
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  border-bottom: solid rgba(0, 255, 255, 0.6);
+}
+.tab{
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+  border-radius: 10px 10px 0 0;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.tab:hover{
+  background-color: rgba(0, 255, 255, 0.4);
+  color: black;
+}
+.tab-active{
+ font-weight: 700;
+ color: white;
+  background-color: rgba(0, 132, 255, 0.6);
+}
+@media screen and (max-width: 650px) {
+  .container {
+    border-radius: 0;
+    padding: 3rem 1rem;
+    width: 100%;
+    margin: 0;
   }
 }

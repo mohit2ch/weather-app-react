@@ -1,0 +1,10 @@
+For sunrise and sunset:
+progress bar to represent sunrise and sunset with monn and sun icon representing night and day
+
+For forecast
+-- list of all times of the  day with weather icon, chance of rain and temperature
+-- will have moon phase 
+-- will expand on day forecast
+
+
+
